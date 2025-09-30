@@ -11,16 +11,6 @@ class Employees{
     };
 };
 
-let employed = [
-    new Employees("Bob", "Accounting"),
-    new Employees("Jebediah", "Butter Making"),
-    new Employees("Billy", "Family Business")
-];
-
-for (associate of employed){
-    console.log(associate.describe())
-};
-
 class Manager extends Employees{
     constructor(name, department, teamSize) {
         super(name, department, level);
@@ -31,6 +21,12 @@ class Manager extends Employees{
         return(`${this.name} manages ${this.department} department with a team of ${this.teamSize}.`)
     }
 };
+
+// Create employees
+let emp1 = new Employees("Bob", "Accounting")
+let emp2 = new Employees("Jebediah", "Butter Making")
+let emp3 = new Employees("Billy", "Family Business")
+let emp4 = new Employees("Joel", "Scout Master")
 
 
 

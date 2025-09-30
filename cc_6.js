@@ -23,11 +23,25 @@ for (associate of employed){
 
 class Manager extends Employees{
     constructor(name, department, teamSize) {
-        super(name, department);
+        super(name, department, level);
         this.teamSize = teamSize;
     }
 
-    isExecutiveLevel(){
-        
+    describe() {
+        return(`${this.name} manages ${this.department} department with a team of ${this.teamSize}.`)
     }
-}
+};
+
+
+
+function promoteLevel(level){    
+    if (level === "Employee"){
+        return "Manager";
+    } else if(level === "Manager"){
+        return "Executive";
+    } else if (level === "Executive"){
+        return "Director";
+    } else if (level === "Director"){
+        return "Partner";
+    } else return "Owner";
+};
